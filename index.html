@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is it First Friday?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Is it First Friday?</h1>
+    <p id="answer"></p>
+    <script>
+        const currentDate = new Date();
+        const dayOfMonth = currentDate.getDate();
+        const dayOfWeek = currentDate.getDay();
+
+        if (dayOfMonth === 1 && dayOfWeek === 5) {
+            document.getElementById("answer").textContent = "Yes";
+        } else {
+            document.getElementById("answer").textContent = "No";
+        }
+    </script>
+</body>
+</html>
