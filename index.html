@@ -41,7 +41,7 @@
         const dayOfMonth = currentDate.getDate();
         const dayOfWeek = currentDate.getDay();
 
-        if (dayOfMonth === 1 && dayOfWeek === 5) {
+        if (dayOfMonth <= 7 && dayOfWeek === 5) {
             document.getElementById("answer").textContent = "Yes";
         } else {
             document.getElementById("answer").textContent = "No";
