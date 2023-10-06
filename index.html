@@ -29,6 +29,8 @@
         p {
             font-size: 160px;
             font-weight: bold;
+        }
+        rainbow {
             animation: rainbow 1s infinite alternate;
         }
         @keyframes rainbow {
@@ -42,7 +44,7 @@
 </head>
 <body>
     <h1>Is it First Friday?</h1>
-    <p id="answer"></p>
+    <p id="answer" class="rainbow"></p>
     <script>
         const currentDate = new Date();
         const dayOfMonth = currentDate.getDate();
@@ -52,6 +54,7 @@
             document.getElementById("answer").textContent = "Yes";
         } else {
             document.getElementById("answer").textContent = "No";
+            document.getElementById("answer").classList.remove("rainbow");
         }
     </script>
 </body>
